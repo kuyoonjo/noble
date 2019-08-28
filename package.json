@@ -8,7 +8,7 @@
   },
   "author": "Yu Chen",
   "license": "ISC",
-  "optionalDependencies": {
+  "peerDependencies": {
     "noble-unix": "github:kuyoonjo/noble-unix",
     "noble-winrt": "github:kuyoonjo/noble-winrt"
   }
