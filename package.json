@@ -1,5 +1,5 @@
 {
-  "name": "noble",
+  "name": "@kuyoonjo/noble",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "Yu Chen",
   "license": "ISC",
   "peerDependencies": {
-    "noble-unix": "github:kuyoonjo/noble-unix",
-    "noble-winrt": "github:kuyoonjo/noble-winrt"
+    "noble-unix": "@kuyoonjo/noble-unix",
+    "noble-winrt": "@kuyoonjo/noble-winrt"
   }
 }
