@@ -1,6 +1,6 @@
 {
   "name": "@kuyoonjo/noble",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "license": "ISC",
   "peerDependencies": {
     "@kuyoonjo/noble-unix": "^0.1.4",
-    "@kuyoonjo/noble-winrt": "^0.1.2"
+    "@kuyoonjo/noble-winrt": "^0.1.3"
   }
 }
