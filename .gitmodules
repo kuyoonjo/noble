@@ -1,0 +1,6 @@
+[submodule "unix"]
+	path = unix
+	url = https://github.com/abandonware/noble.git
+[submodule "winrt"]
+	path = winrt
+	url = https://github.com/Timeular/noble-winrt.git
