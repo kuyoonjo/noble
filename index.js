@@ -7,8 +7,10 @@ switch (process.platform) {
     const NobleMac = require(`./build/${process.platform}/${process.arch}/binding`).NobleMac;
     inherits(NobleMac, EventEmitter);
     module.exports = new Noble(new NobleMac());
+    break;
   case 'win32':
     const NobleWinrt = require(`./build/${process.platform}/${process.arch}/binding`).NobleWinrt;
     inherits(NobleWinrt, EventEmitter);
     module.exports = new Noble(new NobleWinrt());
+    break;
 }
