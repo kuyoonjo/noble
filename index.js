@@ -1,9 +1,14 @@
+const Noble = require('./unix/lib/noble');
+const { EventEmitter } = require('events');
+const { inherits } = require('util');
+
 switch (process.platform) {
   case 'darwin':
-    const events = require('events');
-    const util = require('util');
     const NobleMac = require(`./build/${process.platform}/${process.arch}/binding`).NobleMac;
-    util.inherits(NobleMac, events.EventEmitter);
-    const Noble = require('./unix/lib/noble');
+    inherits(NobleMac, EventEmitter);
     module.exports = new Noble(new NobleMac());
+  case 'win32':
+    const NobleWinrt = require(`./build/${process.platform}/${process.arch}/binding`).NobleWinrt;
+    inherits(NobleWinrt, EventEmitter);
+    module.exports = new Noble(new NobleWinrt());
 }
