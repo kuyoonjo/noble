@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "cpwin": "mkdir -p build/win32/x64 && cpwin build/win32/x64/binding.node build/win32/x64"
+    "cpwin:node": "mkdir -p build/win32/node/x64 && cpwin build/win32/node/x64/binding.node build/win32/node/x64",
+    "cpwin:electron": "mkdir -p build/win32/electron/x64 && cpwin build/win32/electron/x64/binding.node build/win32/electron/x64",
+    "cpwin": "npm run cpwin:node && npm run cpwin:electron"
   },
   "author": "Yu Chen",
   "license": "ISC",
