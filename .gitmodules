@@ -4,3 +4,6 @@
 [submodule "winrt"]
 	path = winrt
 	url = https://github.com/Timeular/noble-winrt.git
+[submodule "node-bluetooth-hci-socket"]
+	path = node-bluetooth-hci-socket
+	url = https://github.com/abandonware/node-bluetooth-hci-socket.git
