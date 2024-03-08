@@ -1,27 +1,41 @@
 {
   "name": "@kuyoonjo/noble",
-  "version": "2.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "2.1.0",
+  "nodeVersion": "16.20.0",
+  "engines": {
+    "node": ">=16.20.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "description": "A Node.js BLE (Bluetooth Low Energy) central library.",
+  "main": "index",
+  "types": "unix/index",
   "scripts": {
-    "build": "node build.js",
-    "cpwin:node": "mkdir -p build/win32/node/x64 && cpwin build/win32/node/x64/binding.node build/win32/node/x64",
-    "cpwin:electron": "mkdir -p build/win32/electron/x64 && cpwin build/win32/electron/x64/binding.node build/win32/electron/x64",
-    "cpwin": "npm run cpwin:node && npm run cpwin:electron"
+    "install": "node install",
+    "build": "smake build napi"
   },
   "author": "Yu Chen",
   "license": "ISC",
   "devDependencies": {
-    "prebuild": "^10.0.1"
-  },
-  "dependencies": {
+    "@smake/buffer": "^2.0.0",
+    "@smake/llvm": "^1.2.0",
+    "@smake/llvm-vscode": "^1.0.0",
+    "@smake/node-addon": "^1.0.1",
+    "@smake/utils": "^1.0.3",
     "debug": "^4.3.1",
-    "is-electron": "^2.2.0",
+    "nan": "^2.19.0",
     "napi-thread-safe-callback": "^0.0.6",
-    "node-addon-api": "^3.1.0"
+    "node-addon-api": "^3.1.0",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   },
   "files": [
-    "build",
-    "unix/lib"
+    "index.js",
+    "install.js",
+    "build/noble",
+    "unix/index.d.ts"
   ]
 }
