@@ -24,6 +24,6 @@ module.exports = {
     path: resolve('build', 'noble'),
   },
   externals: {
-    './noble': './noble',
+    './noble': './noble.node',
   },
 };

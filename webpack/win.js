@@ -20,5 +20,7 @@ module.exports = {
     filename: '[name].js',
     path: resolve('build', 'noble'),
   },
-  externals: ['./noble'],
+  externals: {
+    './noble': './noble.node',
+  },
 };
